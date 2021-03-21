@@ -1,0 +1,11 @@
+type Post {
+    id: String!
+    title: String!
+    text: String!
+    category: String
+}
+
+# The Root Query for the application
+type Query {
+    recentPosts(count: Int, offset: Int): [Post]!
+}
