@@ -19,4 +19,7 @@ public class PostQuery implements GraphQLQueryResolver {
     public List<Post> getRecentPosts(int count, int offset) {
         return postService.getRecentPosts(count, offset);
     }
+    public Post getById(String id) throws Exception {
+        return postService.findById(id);
+    }
 }

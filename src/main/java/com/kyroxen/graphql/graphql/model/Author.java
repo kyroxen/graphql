@@ -4,15 +4,12 @@ import lombok.*;
 import org.springframework.stereotype.Component;
 
 @Component
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
-public class Post {
+public class Author {
     private String id;
-    private String title;
-    private String text;
-    private String category;
-    private Author author;
+    private String name;
 }

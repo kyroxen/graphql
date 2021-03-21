@@ -1,11 +1,18 @@
 type Post {
-    id: String!
-    title: String!
-    text: String!
+    id: String
+    title: String
+    text: String
     category: String
+    author: Author
+}
+
+type Author {
+    id: String
+    name: String
 }
 
 # The Root Query for the application
 type Query {
     recentPosts(count: Int, offset: Int): [Post]!
+    byId(id: String) : Post
 }
